@@ -31,6 +31,3 @@ This project is a minimal HTTP server implemented in Java, designed for educatio
 
 Contributions are welcome! Submit pull requests or report issues to improve the project.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
