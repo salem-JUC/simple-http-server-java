@@ -9,4 +9,7 @@ public class parsingException extends Exception{
         this.code = code;
     }
 
+    public HttpStatusCode getCode() {
+        return code;
+    }
 }

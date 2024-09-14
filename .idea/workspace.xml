@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bad294a-e0ab-4ebe-ac79-b314f331aad6" name="Changes" comment="setup" />
+    <list default="true" id="3bad294a-e0ab-4ebe-ac79-b314f331aad6" name="Changes" comment="setup">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/MyHttpServer/HttpConnectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/MyHttpServer/HttpConnectionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/MyHttpServer/HttpParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/MyHttpServer/HttpParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/MyHttpServer/HttpRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/MyHttpServer/HttpRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/MyHttpServer/HttpStatusCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/MyHttpServer/HttpStatusCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/MyHttpServer/parsingException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/MyHttpServer/parsingException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/MyHttpServer/HttpConnectionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/MyHttpServer/HttpConnectionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/MyHttpServer/HttpParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/MyHttpServer/HttpParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/MyHttpServer/parsingException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/MyHttpServer/parsingException.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +31,7 @@
       <list>
         <option value="Enum" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -29,7 +41,7 @@
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/simple-http-server-java" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="GithubDefaultAccount">
@@ -47,12 +59,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/salem/OneDrive/سطح المكتب/java projects/MyHttpServer",
+    "last_opened_file_path": "C:/Users/salem/OneDrive/سطح المكتب/java projects/MyHttpServer/webRoot",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>

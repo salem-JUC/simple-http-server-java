@@ -7,7 +7,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
-import java.util.Scanner;
 
 public class HttpParser {
 
@@ -21,19 +20,16 @@ public class HttpParser {
         this.is = is;
     }
 
-    public void parseRequest() throws IOException {
+    public HttpRequest parseRequest() throws IOException, parsingException {
         HttpRequest request = new HttpRequest();
         InputStreamReader isr = new InputStreamReader(is , StandardCharsets.US_ASCII);
 
-        try {
-            parseRequestLine(isr , request);
-        } catch (parsingException e) {
-            throw new RuntimeException(e); // TODO
-        }
+        parseRequestLine(isr , request);
+
 //        parseHeaders(isr , request);
 //        parseBody(isr , request);
 
-
+        return request;
 
     }
 

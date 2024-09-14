@@ -4,9 +4,9 @@ import java.net.http.HttpConnectTimeoutException;
 
 public class HttpRequest {
 
-    HttpMethod method;
-    String target;
-    String version;
+    private HttpMethod method;
+    private String target;
+    private String version;
 
     public HttpMethod getMethod() {
         return method;

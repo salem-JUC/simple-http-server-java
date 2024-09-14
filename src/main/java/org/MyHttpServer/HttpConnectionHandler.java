@@ -27,19 +27,31 @@ public class HttpConnectionHandler extends Thread{
         OutputStream os = null;
 
         try {
+            boolean responseWithException = false;
             os = clientSocket.getOutputStream();
             is = clientSocket.getInputStream();
-
+            HttpResponse response = new HttpResponse();
+            HttpResponseGenerator hRGenerator = new HttpResponseGenerator();
             HttpParser parser = new HttpParser(is);
-            parser.parseRequest();
-            String html = "<html><head><title>my Http Server</title></head><body>Hello" +
-                    "to My http Server</body></html>";
+            try {
+                hRGenerator = new HttpResponseGenerator(parser.parseRequest());
+            } catch (parsingException e) {
+                response = hRGenerator.responseWithParsingException(e.getCode());
+            }
 
-            String response = "HTTP/1.1 200 OK\n\r"
-                    + "Content-Length: " + html.getBytes().length + "\n\r\n\r"
-                    + html + "\n\r\n\r";
+            if (!responseWithException){
+                response = hRGenerator.response();
+            }
 
-            os.write(response.getBytes());
+//
+//            String html = "<html><head><title>my Http Server</title></head><body>Hello" +
+//                    "to My http Server</body></html>";
+//
+//            String response = "HTTP/1.1 200 OK\n\r"
+//                    + "Content-Length: " + html.getBytes().length + "\n\r\n\r"
+//                    + html + "\n\r\n\r";
+
+            os.write(response.responseToWrite().getBytes());
         } catch (IOException e) {
             LOGGER.error("error handling connection " + e);
         }finally {
