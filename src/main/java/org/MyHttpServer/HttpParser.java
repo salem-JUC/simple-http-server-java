@@ -22,9 +22,9 @@ public class HttpParser {
 
     public HttpRequest parseRequest() throws IOException, parsingException {
         HttpRequest request = new HttpRequest();
-        InputStreamReader isr = new InputStreamReader(is , StandardCharsets.US_ASCII);
 
-        parseRequestLine(isr , request);
+
+        parseRequestLine(is , request);
 
 //        parseHeaders(isr , request);
 //        parseBody(isr , request);
@@ -40,13 +40,13 @@ public class HttpParser {
         
     }
 
-    private void parseRequestLine(InputStreamReader isr, HttpRequest request) throws IOException, parsingException {
+    private void parseRequestLine(InputStream is, HttpRequest request) throws IOException, parsingException {
         StringBuilder buffer = new StringBuilder();
         boolean methodParsed = false , targetParsed = false;
-        int byte_;
-        while ( (byte_ = isr.read()) >= 0){
+        char byte_;
+        while ( (byte_ = (char) is.read()) >= 0){
             if (byte_ == CR){
-                byte_ = isr.read();
+                byte_ = (char) is.read();
                 if (byte_ == LF){
                     if (!methodParsed || !targetParsed){
                         //if either method and target not being parsed
